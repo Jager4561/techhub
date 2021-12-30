@@ -1,0 +1,10 @@
+.slider {
+    @apply absolute top-0 left-0 w-full h-full bg-black z-50;
+
+    img {
+        @apply w-full h-full object-center object-cover;
+    }
+}
+.main_container {
+    @apply w-full min-h-screen flex flex-col justify-between;
+}

@@ -1,0 +1,103 @@
+header {
+    @apply w-full h-auto;
+
+    nav {
+        @apply w-full max-w-7xl h-8 flex items-center justify-start px-5 mx-auto;
+
+        .title {
+            @apply text-white text-xs uppercase font-bold pr-5;
+        }
+
+        .nav_position {
+            @apply text-white uppercase text-xs px-5;
+        }
+    }
+
+    .top_bar {
+        @apply w-full h-16 bg-main-black0 border-b border-main-gray;
+
+        .top_bar_container {
+            @apply w-full max-w-7xl flex items-center justify-between space-x-5 mx-auto;
+
+            .logo {
+                @apply w-auto flex-shrink-0 h-16 pr-20;
+
+                img {
+                    @apply h-full;
+                }
+            }
+
+            .search {
+                @apply w-full h-7 flex items-center justify-center rounded-xl bg-main-black1;
+
+                input {
+                    @apply w-full px-2 text-sm text-main-gray bg-transparent;
+                }
+
+                input:focus {
+                    @apply outline-none shadow-none ring-0;
+                }
+
+                .type {
+                    @apply h-full flex items-center space-x-0.5 text-main-gray mx-2;
+
+                    .arrow {
+                        @apply w-4 h-4;
+                    }
+                    
+                    .camera {
+                        @apply w-6 h-6;
+                    }
+                }
+
+                .go_search {
+                    @apply h-full rounded-xl bg-main-orange text-black px-5;
+
+                    svg {
+                        @apply w-5 h-5;
+                    }
+                }
+            }
+
+            .carrer {
+                @apply text-white px-2 py-1 bg-main-black1 flex items-center space-x-1 rounded-lg;
+
+                svg {
+                    @apply w-4 h-4 ;
+                }
+
+                span {
+                    @apply text-xs font-semibold;
+                }
+            }
+
+            .premium {
+                @apply text-white px-2 py-1 bg-main-orange flex items-center space-x-1 rounded-lg;
+
+                svg {
+                    @apply w-4 h-4 ;
+                }
+
+                span {
+                    @apply text-xs font-semibold;
+                }
+            }
+
+            .other_button {
+                @apply text-xs text-gray-300 whitespace-nowrap;
+            }
+        }
+    }
+
+    .bottom_bar {
+        @apply w-full h-10 bg-main-black0;
+
+        nav {
+            @apply h-full flex items-center justify-center space-x-4;
+
+            .nav_position {
+                @apply text-white text-sm;
+            }
+        }
+    }    
+}
