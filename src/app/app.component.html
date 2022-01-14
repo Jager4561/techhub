@@ -1,7 +1,7 @@
-<div [@slider] *ngIf="sliderVisible" class="slider" (click)="closeSlider()">
-  <img class="image" src="../assets/images/slider.png" alt="">
+<div [@slider] *ngIf="sliderVisible && currentURL === '/'" class="slider" (click)="closeSlider()">
+  <img class="image" src="../assets/images/slider.png" (load)="enableSlider()" alt="">
 </div>
-<div *ngIf="!sliderVisible" class="main_container">
+<div class="main_container" >
   <div>
     <app-header></app-header>
     <div class="router_container">

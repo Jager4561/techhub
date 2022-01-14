@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { videos } from 'src/app/data';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
+  videosList = videos.slice(0, 4);
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

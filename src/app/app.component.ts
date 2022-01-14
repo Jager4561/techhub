@@ -1,5 +1,6 @@
 import { animate, query, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -22,17 +23,20 @@ export class AppComponent {
 
   sliderVisible = true;
   sliderLoaded = false;
+  currentURL = "/";
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    const slider = new Image();
-    slider.src = "../assets/images/slider.png";
-    slider.onload = () => {
-      this.sliderLoaded = true;
-    }
+    this.currentURL = this.router.url;
+    if(this.currentURL !== "/") this.sliderVisible = false;
+  }
+
+  enableSlider(): void {
+    this.sliderLoaded = true;
   }
 
   closeSlider(): void {
     if(this.sliderLoaded) this.sliderVisible = false;
-    
   }
 }

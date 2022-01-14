@@ -1,1 +1,59 @@
-<p>watch works!</p>
+<main>
+    <div class="column1">
+        <div class="player_container">
+            <video class="player" [src]="watchVideo.path" controls></video>
+        </div>
+        <div class="info">
+            <div class="title">{{watchVideo.title}}</div>
+            <div class="stats">
+                <div class="views">{{watchVideo.views}} Wyświetleń</div>
+                <div class="spacer"></div>
+                <div class="likes">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span>{{watchVideo.rate}}%</span>
+                </div>
+                <div class="spacer"></div>
+                <div class="date">
+                    {{watchVideo.uploaded}}
+                </div>
+            </div>
+            <div class="author">
+                <img class="avatar" [src]="creators[watchVideo.creator].photo" alt="">
+                <div class="author_info">
+                    <div class="top">
+                        <span>{{watchVideo.author}}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column2">
+        <h1>Inne filmy</h1>
+        <div *ngIf="otherVideos.length == 0" class="no_videos">Brak innych fimów.</div>
+        <a *ngFor="let video of otherVideos" [routerLink]="['/watch', video.id]">
+            <div class="video_container">
+                <div class="thumbnail">
+                    <img src="../../../assets/thumbnails/shutdown_cmd.jpg" alt="">
+                    <div class="time">{{video.time}}</div>
+                </div>
+                <div class="info">
+                    <div class="title">{{video.title.length > 30 ? (video.title | slice:0:30) + '...' : video.title }}</div>
+                    <div>
+                        <div class="author">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>{{video.author}}</span>
+                        </div>
+                        <div class="views">{{video.views}} Wyświetleń</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</main>

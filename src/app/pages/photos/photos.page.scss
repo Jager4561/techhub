@@ -1,0 +1,24 @@
+main {
+    @apply w-full max-w-7xl h-full py-8 px-5 mx-auto;
+
+    .header {
+        @apply text-3xl font-bold text-white;
+    }
+
+    .photos_grid {
+        @apply w-full py-8 grid grid-cols-4 gap-10;
+        grid-template-rows: repeat(1, 16rem);
+
+        .photo {
+            @apply relative w-full h-full;
+
+            img {
+                @apply w-full h-full object-center object-cover;
+            }
+
+            .title {
+                @apply w-full absolute bottom-0 left-0 p-2 text-sm text-white bg-main-black0 bg-opacity-20;
+            }
+        }
+    }
+}

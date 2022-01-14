@@ -1,0 +1,10 @@
+<main>
+    <h1 class="header">Twórcy projektu</h1>
+    <div class="creators_grid">
+        <div *ngFor="let creator of creators" class="creator">
+            <img [src]="creator.photo" alt="">
+            <div class="name">{{creator.name}}</div>
+            <div class="responsible">{{creator.responsible}}</div>
+        </div>
+    </div>
+</main>

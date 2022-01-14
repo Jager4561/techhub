@@ -1,0 +1,9 @@
+<main>
+    <h1 class="header">Zdjęcia</h1>
+    <div class="photos_grid">
+        <a *ngFor="let photo of photos" class="photo" [href]="photo.path" target="_blank">
+            <img [src]="photo.path" [alt]="photo.title"> 
+            <div class="title">{{photo.title}}</div>
+        </a>
+    </div>
+</main>
