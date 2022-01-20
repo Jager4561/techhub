@@ -8,7 +8,7 @@ import { videos } from 'src/app/data';
 })
 export class HomePage implements OnInit {
 
-  videosList = videos.slice(0, 4);
+  videosList = videos.slice(0, 3);
 
   constructor() { }
 

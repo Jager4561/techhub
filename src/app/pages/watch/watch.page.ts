@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { creators, videos } from 'src/app/data';
 
 @Component({
@@ -13,7 +13,7 @@ export class WatchPage implements OnInit {
   otherVideos = [];
   creators = creators;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router: Router) {
     let videoId = +this.route.snapshot.paramMap.get("id");
     this.watchVideo = videos.find(video => video.id == videoId);
     this.otherVideos = videos.filter(video => video.id !== videoId);
@@ -21,6 +21,10 @@ export class WatchPage implements OnInit {
 
   ngOnInit(): void {
     
+  }
+
+  navigateToVideo(id: number) {
+    this.router.navigateByUrl("/watch/" + id);
   }
 
 }

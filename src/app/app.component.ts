@@ -1,6 +1,6 @@
 import { animate, query, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -28,8 +28,12 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.currentURL = this.router.url;
-    if(this.currentURL !== "/") this.sliderVisible = false;
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd) {
+        this.currentURL = this.router.url;
+        if(this.currentURL !== "/") this.sliderVisible = false;
+      }
+    })
   }
 
   enableSlider(): void {

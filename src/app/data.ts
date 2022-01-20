@@ -9,14 +9,62 @@ export const videos = [
         time: "01:08",
         uploaded: "17.12.2021",
         path: "../assets/videos/shutdown_cmd.mov",
-        thumbnail: "../assets/thumbnails/shutdown_cmd.jpg"
+        thumbnail: "../assets/photos/terminal.jpg"
+    },
+    {
+        id: 1,
+        title: "Wbijanie gwoździa",
+        author: "Szymon Jasiówka",
+        creator: 2,
+        views: "1k",
+        rate: "100",
+        time: "00:22",
+        uploaded: "20.01.2022",
+        path: "../assets/videos/wbijanie_gwozdzia.mp4",
+        thumbnail: "../assets/photos/mlotek.jpg"
+    },
+    {
+        id: 2,
+        title: "Obsługa suwmiarki",
+        author: "Szymon Jasiówka",
+        creator: 2,
+        views: "567",
+        rate: "96",
+        time: "00:34",
+        uploaded: "20.01.2022",
+        path: "../assets/videos/suwmiarka.mp4",
+        thumbnail: "../assets/photos/suwmiarka.jpg"
+    },
+    {
+        id: 3,
+        title: "Obsługa klucza dynamometrycznego",
+        author: "Michał Krzysiak",
+        creator: 3,
+        views: "2k",
+        rate: "98",
+        time: "00:21",
+        uploaded: "20.01.2022",
+        path: "../assets/videos/dynamom.mp4",
+        thumbnail: "../assets/photos/klucz.jpg"
     }
 ]
 
 export const photos = [
     {
-        title: "Lutownica",
-        path: "../assets/photos/example.jpg"
+        title: "Suwmiarka",
+        path: "../assets/photos/suwmiarka.jpg"
+    },
+    {
+        title: "Młotek",
+        path: "../assets/photos/mlotek.jpg"
+    },
+    {
+        title: "Terminal",
+        path: "../assets/photos/terminal.jpg"
+    },
+    {
+        title: "Klucz dynamometryczny",
+        path: "../assets/photos/klucz.jpg"
     }
 ]
 
@@ -50,10 +98,5 @@ export const creators = [
         name: "Oleh Lobunets",
         photo: "../assets/avatars/default.png",
         responsible: "Nagrywanie"
-    },
-    {
-        name: "Jan Grzech",
-        photo: "../assets/avatars/sins2.jpg",
-        responsible: "Inspiracja"
     }
 ]

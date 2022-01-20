@@ -1,7 +1,19 @@
 main {
-    @apply w-full max-w-7xl h-full py-8 px-5 mx-auto;
+    @apply w-full max-w-7xl h-full py-8 px-5 mx-auto text-white;
 
     .header {
-        @apply text-3xl font-bold text-white;
+        @apply text-3xl font-bold text-white mb-4;
+    }
+
+    .first {
+        @apply text-lg;
+    }
+
+    p {
+        @apply mb-2
+    }
+
+    h3 {
+        @apply text-xl font-semibold;
     }
 }

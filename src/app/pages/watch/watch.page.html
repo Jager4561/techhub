@@ -35,10 +35,10 @@
     <div class="column2">
         <h1>Inne filmy</h1>
         <div *ngIf="otherVideos.length == 0" class="no_videos">Brak innych fimów.</div>
-        <a *ngFor="let video of otherVideos" [routerLink]="['/watch', video.id]">
+        <a *ngFor="let video of otherVideos" [href]="'/watch/' + video.id">
             <div class="video_container">
                 <div class="thumbnail">
-                    <img src="../../../assets/thumbnails/shutdown_cmd.jpg" alt="">
+                    <img [src]="video.thumbnail" alt="">
                     <div class="time">{{video.time}}</div>
                 </div>
                 <div class="info">
