@@ -1,31 +1,60 @@
 <main>
-    <h1 class="header">Najnowsze wrzucone filmy</h1>
-    <div class="videos_grid">
-        <a [routerLink]="['/watch', video.id]" href="" *ngFor="let video of videosList">
-            <div class="video">
-                <div class="thumbnail">
-                    <img [src]="video.thumbnail" alt="">
-                    <div class="time">{{video.time}}</div>
-                </div>
-                <div class="title">
-                    {{video.title}}
-                </div>
-                <div class="author">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{{video.author}}</span>
-                </div>
-                <div class="stats">
-                    <span>{{video.views}} wyświetleń</span>
-                    <div class="love">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                        <span>{{video.rate}}%</span>
-                    </div>
-                </div>
+    <h1 class="header">O projekcie</h1>
+    <p class="project_desc">
+        Nasza strona została  zrealizowany na potrzeby wykoniania projektu zaliczeniowego dotyczącego zajęć Techniki Multimedialne. Nazwa projektu to Techhub. Projekt to strona internetowa na której zamieszczone są filmy instruktażowe dotyczące zagadnień z dziedziny techniki i informatyki. Zaprezentowane zostały także zdjęcia obiektów wykorzystywanych w filmie i twórców projektu. Za stronę internetową odpowiedzialny jest Wojciech C. natomiast za oprawę graficzną Mateusz B. Od strony filmowej zajęli się Szymon J. i Oleh L. Głosu udzielił Michał K. Od strony tekstowej udzielał się Jakub L.
+    </p>
+    <div class="video_container">
+        <h2 class="title">Wyłączanie komputera za pomocą CMD</h2>
+        <div class="content">
+            
+            <div class="video_desc">
+                W pierwszym filmie pokazany jest sposób wyłączenia komputera za pomocą komend i konsoli. Na samym początku widać komende "Shutdown /?", która pozwala wyświetlić listę możliwych opcji jak np. "/help". 
+                Przykłądowe komendy:
+                - Shutdown /s - jest to podstawowe wyłączenie komputera,
+                - Shutdown /r - jest to komenda pozwalająca zrestartować komputer,
+                - Shutdown /l - jest to wylogowanie użytkownika (działa rówież gdy użytkownik nie ma żadnego hasła),
+                - Shutdown /a - odpowiada za anulowanie juz zaplanowanych wyłączeń.
+                Konstrukcja komendy "Shutdown [operacja] [dodatkowa informacja]" np. Shutdown /r /t 10 - pozwala zrestartować komputer oraz odliczany jest czas do restartu w sekundach. Minimalna wartośc t wynosi 1 sekundę a maksymalnie 16 minut i 33 sekundy.
             </div>
-        </a>
+            <a class="image" [routerLink]="['/watch/0']">
+                <img src="../../../assets/photos/terminal.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="video_container reversed">
+        <h2 class="title">Wbijanie gwoździa</h2>
+        <div class="content">
+            <a class="image" [routerLink]="['/watch/1']">
+                <img src="../../../assets/photos/mlotek.jpg" alt="">
+            </a>
+            <div class="video_desc">
+                Jest to film instruktarzowy pokazujący poprawne wbicie gwoździa krok po kroku.
+Gwóźdź należy wbijać  młotkiem metalowym. Najpierw należy ustawić gwóźdź w pionowej pozycji (można go lekko wbić w taki sposób aby trzymał się w danym tworzywie). Następnie  zodpowiednią siłą kolejno uderzać tak aby główka gwoździa nie wystawała ponad powierznię, w którą jest on wbijany.
+            </div>
+        </div>
+    </div>
+    <div class="video_container reversed">
+        <h2 class="title">Obsługa suwmiarki</h2>
+        <div class="content">
+            <div class="video_desc">
+                Film pokazujący poprawną obsługę i zastosowanie suwmiarki.
+Najczęściej stosowane i prawidłowe wykonanie pomiaru suwmiarką polega na umieszczeniu mierzonego przedmiotu między rozsuniętymi szczękami urządzenia, a następnie zaciśnięciu tych szczęk w taki sposób, żeby dotykały krawędzi przedmiotu. Za pomocą szczęk zewnętrznych narzędzia wykonasz precyzyjne pomiary zewnętrzne. W podobny spób można także wykonać pomiar wewnętrzny danego otworu wykorzystując szczęki wewnętrzne. Kolejnym pomiarem jaki można wykonać za pomocą suwmiarki jest pomiar głębokości, którą mierzymy wysuwając miarkę z dolnej części suwmiarki. 
+            </div>
+            <a class="image" [routerLink]="['/watch/2']">
+                <img src="../../../assets/photos/suwmiarka.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="video_container reversed">
+        <h2 class="title">Obsługa klucza dynamometrycznego</h2>
+        <div class="content">
+            <a class="image" [routerLink]="['/watch/3']">
+                <img src="../../../assets/photos/klucz.jpg" alt="">
+            </a>
+            <div class="video_desc">
+                Ostatni film ukazuje poprawną obsługe klucza dynamometrycznego.
+W kluczu znajduje się specjalna sprężyna, która podczas dokręcania wygina się w odpowiedni sposób. Specjalna zapadka blokuje klucz w chwili, kiedy przekroczona zostanie ustawiona siła dokręcania. W chwili przekroczenia zadanej wartości słychać charakterystyczne „kliknięcie” klucza. Siłę z jaką jest naciskany klucz należy dostosować do wartości ustawionego momentu. Im większy moment ustawiony, tym większa powinna być użyta siła. (po zakończeniu korzystania z klucza należy ustawić minimalną wartość momentu)
+            </div>
+        </div>
     </div>
 </main>

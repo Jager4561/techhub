@@ -117,10 +117,14 @@ header {
         @apply w-full h-10 bg-main-black0;
 
         nav {
-            @apply h-full flex items-center justify-center space-x-4;
+            @apply h-full flex items-center justify-around;
 
             .nav_position {
-                @apply text-white text-sm;
+                @apply text-white text-sm duration-300;
+            }
+            
+            .nav_position:hover {
+                letter-spacing: 10px;
             }
         }
     }    
