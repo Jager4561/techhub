@@ -18,7 +18,7 @@ export const videos = [
         creator: 2,
         views: "1k",
         rate: "100",
-        time: "00:22",
+        time: "00:16",
         uploaded: "20.01.2022",
         path: "../assets/videos/wbijanie_gwozdzia.mp4",
         thumbnail: "../assets/photos/mlotek.jpg"
@@ -30,7 +30,7 @@ export const videos = [
         creator: 2,
         views: "567",
         rate: "96",
-        time: "00:34",
+        time: "00:39",
         uploaded: "20.01.2022",
         path: "../assets/videos/suwmiarka.mp4",
         thumbnail: "../assets/photos/suwmiarka.jpg"

@@ -9,7 +9,7 @@ header {
         }
 
         .nav_position {
-            @apply text-white uppercase text-xs px-5;
+            @apply text-white uppercase text-xs px-5 cursor-default;
         }
     }
 
@@ -120,7 +120,7 @@ header {
             @apply h-full flex items-center justify-around;
 
             .nav_position {
-                @apply text-white text-sm duration-300;
+                @apply text-white text-sm duration-300 cursor-pointer;
             }
             
             .nav_position:hover {
