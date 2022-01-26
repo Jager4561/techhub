@@ -71,32 +71,32 @@ export const photos = [
 export const creators = [
     {
         name: "Mateusz Biela",
-        photo: "../assets/avatars/default.png",
+        photo: "../assets/avatars/avatar3.png",
         responsible: "Grafika"
     },
     {
         name: "Wojciech Cyrwus",
-        photo: "../assets/avatars/default.png",
+        photo: "../assets/avatars/avatar6.png",
         responsible: "Strona internetowa"
     },
     {
         name: "Szymon Jasiówka",
-        photo: "../assets/avatars/default.png",
+        photo: "../assets/avatars/avarat5.png",
         responsible: "Nagrywanie"
     },
     {
         name: "Michał Krzysiak",
-        photo: "../assets/avatars/default.png",
+        photo: "../assets/avatars/avatar4.png",
         responsible: "Lektor"
     },
     {
         name: "Jakub Lipka",
-        photo: "../assets/avatars/default.png",
+        photo: "../assets/avatars//avatar1.png",
         responsible: "Opisy"
     },
     {
         name: "Oleh Lobunets",
-        photo: "../assets/avatars/default.png",
+        photo: "../assets/avatars/avatar2.png",
         responsible: "Nagrywanie"
     }
 ]

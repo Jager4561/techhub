@@ -1,7 +1,7 @@
 <main>
     <h1 class="header">O projekcie</h1>
     <p class="project_desc">
-        Nasza strona została  zrealizowany na potrzeby wykoniania projektu zaliczeniowego dotyczącego zajęć Techniki Multimedialne. Nazwa projektu to Techhub. Projekt to strona internetowa na której zamieszczone są filmy instruktażowe dotyczące zagadnień z dziedziny techniki i informatyki. Zaprezentowane zostały także zdjęcia obiektów wykorzystywanych w filmie i twórców projektu. Za stronę internetową odpowiedzialny jest Wojciech C. natomiast za oprawę graficzną Mateusz B. Od strony filmowej zajęli się Szymon J. i Oleh L. Głosu udzielił Michał K. Od strony tekstowej udzielał się Jakub L.
+        Nasza strona została zrealizowana na potrzeby wykonania projektu zaliczeniowego dotyczącego zajęć Techniki Multimedialne. Nazwa projektu to Techhub. Projekt obejmuje stronę internetową, na której zamieszczone są filmy instruktażowe dotyczące zagadnień z dziedziny techniki i informatyki. Zaprezentowane zostały także zdjęcia obiektów wykorzystywanych w filmie i ich twórców. Za stronę internetową odpowiedzialny jest Wojciech C. natomiast za oprawę graficzną Mateusz B. Od strony filmowej zajęli się Szymon J. i Oleh L. Głosu udzielił Michał K. Od strony tekstowej udzielał się Jakub L.
     </p>
     <div class="video_container">
         <h2 class="title">Wyłączanie komputera za pomocą CMD</h2>
@@ -10,10 +10,12 @@
             <div class="video_desc">
                 W pierwszym filmie pokazany jest sposób wyłączenia komputera za pomocą komend i konsoli. Na samym początku widać komende "Shutdown /?", która pozwala wyświetlić listę możliwych opcji jak np. "/help". 
                 Przykłądowe komendy:
-                - Shutdown /s - jest to podstawowe wyłączenie komputera,
-                - Shutdown /r - jest to komenda pozwalająca zrestartować komputer,
-                - Shutdown /l - jest to wylogowanie użytkownika (działa rówież gdy użytkownik nie ma żadnego hasła),
-                - Shutdown /a - odpowiada za anulowanie juz zaplanowanych wyłączeń.
+                <ul>
+                    <li>- Shutdown /s - jest to podstawowe wyłączenie komputera,</li>
+                    <li>- Shutdown /r - jest to komenda pozwalająca zrestartować komputer,</li>
+                    <li>- Shutdown /l - jest to wylogowanie użytkownika (działa rówież gdy użytkownik nie ma żadnego hasła),</li>
+                    <li>- Shutdown /a - odpowiada za anulowanie juz zaplanowanych wyłączeń.</li>
+                </ul>
                 Konstrukcja komendy "Shutdown [operacja] [dodatkowa informacja]" np. Shutdown /r /t 10 - pozwala zrestartować komputer oraz odliczany jest czas do restartu w sekundach. Minimalna wartośc t wynosi 1 sekundę a maksymalnie 16 minut i 33 sekundy.
             </div>
             <a class="image" [routerLink]="['/watch/0']">
